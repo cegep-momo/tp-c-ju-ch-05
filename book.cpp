@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <sstream>
 
 #include "book.h"
 
@@ -122,4 +123,26 @@ string Book::toFileFormat() const
                    "|" + dispo +
                    "|" + this->borrowerName;
     return ligne;
+}
+
+void Book::fromFileFormat(const string &line)
+{
+    stringstream ss(line);
+    string token;
+    string dispo;
+
+    getline(ss, this->title, '|');
+    getline(ss, this->author, '|');
+    getline(ss, this->isbn, '|');
+    getline(ss, dispo, '|');
+    getline(ss, this->borrowerName, '|');
+
+    if (dispo == "1")
+    {
+        this->isAvailable = true;
+    }
+    else
+    {
+        this->isAvailable = false;
+    }
 }
