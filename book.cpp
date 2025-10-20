@@ -104,3 +104,22 @@ string Book::toString() const
                    "\nNom de l'emprunteur : " + this->borrowerName;
     return bookToString;
 }
+
+string Book::toFileFormat() const
+{
+    string dispo;
+    if (this->isAvailable)
+    {
+        dispo = "1";
+    }
+    else
+    {
+        dispo = "0";
+    }
+    string ligne = this->title +
+                   "|" + this->author +
+                   "|" + this->isbn +
+                   "|" + dispo +
+                   "|" + this->borrowerName;
+    return ligne;
+}
