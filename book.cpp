@@ -1,3 +1,4 @@
+#include <iostream>
 #include <string>
 
 #include "book.h"
@@ -69,4 +70,37 @@ void Book::setAvailability(bool available)
 void Book::setBorrowerName(const string &borrowerName)
 {
     this->borrowerName = borrowerName;
+}
+
+// Methods
+void Book::checkOut(const string &borrower)
+{
+    this->borrowerName = borrower;
+    this->isAvailable = false;
+}
+
+void Book::returnBook()
+{
+    this->borrowerName = "";
+    this->isAvailable = true;
+}
+
+string Book::toString() const
+{
+    string dispo;
+    string bookToString;
+    if (this->isAvailable)
+    {
+        dispo = "Disponible";
+    }
+    else
+    {
+        dispo = "Indisponible";
+    }
+    bookToString = "Titre : " + this->title +
+                   "\nAuteur : " + this->author +
+                   "\nISBN : " + this->isbn +
+                   "\nStatut : " + dispo +
+                   "\nNom de l'emprunteur : " + this->borrowerName;
+    return bookToString;
 }
