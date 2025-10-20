@@ -19,6 +19,7 @@ Pour ca il suffit de les copiers dans le repertoire `build` avec l'application `
 
 La fonctionnalité de sauvegarde dans un fichier utilise l'entête fstream qui permet de gérer des flux de fichiers (file stream). 
 Étapes de la sauvegarde : 
+
     1. déclarer le flux sortant du fichier en spécifiant son nom.
 
     2. Vérifier si le fichier s'est ouvert avec succès et inscrire un message d'erreur dans le cas contraire.
@@ -34,6 +35,7 @@ La fonctionnalité de sauvegarde dans un fichier utilise l'entête fstream qui p
 Pour mieux optimiser la gestion de la bibliothèque, dans l'optique que cette dernière puisse contenir un nombre beaucoup plus important de nombre et d'utilisateur, il faudrait sauvegarder les données des livres et des utilisateurs dans une base de données mySQL, par exemple.
 
 Pour se faire en C++ : 
+
     1. Installer le connecteur MySQL pour pouvoir accéder à notre base de donnée avec les en-têtes adéquates.
 
     2. Se connecter à la base de donnée en spécifiant l'url où la base de donnée est hébergée, le nom d'utilisateur ainsi que son mot de passe afin de pouvoir avoir les accès complets.
