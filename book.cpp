@@ -9,7 +9,7 @@ using namespace std;
 // Constructors
 
 // Par défaut
-Book::Book() : title(""), author(""), isbn(""), isAvailable(true), borrowerName("") {};
+Book::Book() : title(""), author(""), isbn(""), isAvailable(true), borrowerName("") {}
 
 // Paramètré
 Book::Book(const string &title, const string &author, const string &isbn)
@@ -19,7 +19,7 @@ Book::Book(const string &title, const string &author, const string &isbn)
     this->isbn = isbn;
     this->isAvailable = false;
     this->borrowerName = "";
-};
+}
 
 // Getters
 string Book::getTitle() const
@@ -65,7 +65,7 @@ void Book::setISBN(const string &isbn)
 
 void Book::setAvailability(bool available)
 {
-    this->isAvailable = isAvailable;
+    this->isAvailable = available;
 }
 
 void Book::setBorrowerName(const string &borrowerName)
