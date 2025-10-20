@@ -155,11 +155,13 @@ int main()
         }
 
         case 5: // Display All Books
+            library.sortBooksByAuthor();
             library.displayAllBooks();
             pauseForInput();
             break;
 
         case 6: // Display Available Books
+            library.sortBooksByAuthor();
             library.displayAvailableBooks();
             pauseForInput();
             break;

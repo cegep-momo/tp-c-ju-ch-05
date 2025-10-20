@@ -1,6 +1,7 @@
 #include <iostream>
 #include <algorithm>
 #include <cctype> // Pour la réponse de la confirmations
+#include <vector>
 
 #include "library.h"
 
@@ -256,3 +257,10 @@ int Library::getAvailableBookCount() const
                     });
 }
 int Library::getCheckedOutBookCount() const { return getTotalBooks() - getAvailableBookCount(); }
+
+// Fonctionnalité de tri par auteur
+void Library::sortBooksByAuthor()
+{
+    sort(books.begin(), books.end(), [](unique_ptr<Book> &a, unique_ptr<Book> &b)
+         { return (*a).getAuthor() < (*b).getAuthor(); });
+}
