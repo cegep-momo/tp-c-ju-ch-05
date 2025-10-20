@@ -18,6 +18,7 @@ Pour ca il suffit de les copiers dans le repertoire `build` avec l'application `
 # Question 1
 
 La fonctionnalité de sauvegarde dans un fichier utilise l'entête fstream qui permet de gérer des flux de fichiers (file stream). 
+
 Étapes de la sauvegarde : 
 
     1. déclarer le flux sortant du fichier en spécifiant son nom.
