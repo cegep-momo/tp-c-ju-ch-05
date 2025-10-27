@@ -264,3 +264,10 @@ void Library::sortBooksByAuthor()
     sort(books.begin(), books.end(), [](unique_ptr<Book> &a, unique_ptr<Book> &b)
          { return (*a).getAuthor() < (*b).getAuthor(); });
 }
+
+// Fonctionnalité de tri par titre
+void Library::sortBooksByTitle()
+{
+    sort(books.begin(), books.end(), [](unique_ptr<Book> &a, unique_ptr<Book> &b)
+         { return (*a).getTitle() < (*b).getTitle(); });
+}

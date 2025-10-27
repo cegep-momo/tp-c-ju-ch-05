@@ -155,13 +155,49 @@ int main()
         }
 
         case 5: // Display All Books
-            library.sortBooksByAuthor();
+            int option;
+            cout << "Choisissez le critère de tri :\n";
+            cout << "1. Par auteur\n";
+            cout << "2. Par titre\n";
+            cout << "Votre choix : ";
+            cin >> option;
+
+            switch (option)
+            {
+            case 1:
+                library.sortBooksByAuthor();
+                break;
+            case 2:
+                library.sortBooksByTitle();
+                break;
+            default:
+                cout << "Choix invalide. Affichage sans tri.\n";
+                break;
+            }
+
             library.displayAllBooks();
             pauseForInput();
             break;
 
         case 6: // Display Available Books
-            library.sortBooksByAuthor();
+            cout << "Choisissez le critère de tri :\n";
+            cout << "1. Par auteur\n";
+            cout << "2. Par titre\n";
+            cout << "Votre choix : ";
+            cin >> option;
+
+            switch (option)
+            {
+            case 1:
+                library.sortBooksByAuthor();
+                break;
+            case 2:
+                library.sortBooksByTitle();
+                break;
+            default:
+                cout << "Choix invalide. Affichage sans tri.\n";
+                break;
+            }
             library.displayAvailableBooks();
             pauseForInput();
             break;

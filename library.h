@@ -48,8 +48,9 @@ public:
     int getAvailableBookCount() const;
     int getCheckedOutBookCount() const;
 
-    // Fonctionnalité de tri
+    // Fonctionnalités de tri
     void sortBooksByAuthor();
+    void sortBooksByTitle();
 };
 
 #endif
