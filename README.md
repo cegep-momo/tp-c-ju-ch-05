@@ -1,3 +1,11 @@
+#Informations sur le TP
+Nom : Julien Chauvette
+DA : 202390098
+
+Fonctionnalité dans Interface et Expérience Utilisateur : Confirmation de suppression des livres
+
+Fonctionnalité dans Gestion des Données : Tri des résultats par titre, auteur pour l’affichage
+
 # Construire le projet
 Vous pouvez utiliser un dev container de base C++ de VScode.
 Le projet utilise cmake, pensez à l'inclure dans votre dev container.
